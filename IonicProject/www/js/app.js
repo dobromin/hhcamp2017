@@ -7,7 +7,7 @@ var exampleApp = angular.module('starter', ['ionic', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
+    if(window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -28,8 +28,8 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
     $scope.scanBarcode = function() {
       //confirm("pressed ");
         
-        // $("#left").animate({"left":"-110%"}, "slow"); 
-        // $("#right").animate({"left":"0"}, "slow");
+        $("#left").animate({"left":"-110%"}, "slow"); 
+        $("#right").animate({"left":"0"}, "slow");
 
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             // alert(imageData.text);
@@ -52,5 +52,7 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
         $("#right2").animate({"left":"-110%"}, "slow"); 
         $("#right3").animate({"left":"0"}, "slow");
     };
-
 });
+
+angular.bootstrap(document.getElementById('test'), ['starter']);
+// angular.bootstrap(document, ['starter']);

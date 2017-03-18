@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body style="overflow-x:hidden">
+
+    <ul class="nav nav-pills nav-justified">
+        <li id="pre" role="presentation" class="active" onclick="onPreActive();"><a href="#">Preoperation</a></li>
+        <li id="post" role="presentation" onclick="onPostActive();"><a href="#">Postoperation</a></li>
+    </ul>
+
+    <div class="user_list" id="ul-pre">
+        <ul>
+            <li>
+                <div class="user_bad">
+                    <img class="user_avatar cpointer" src="LeaBernard.jpg"/>
+                    <div class="user_info">
+                        <span class="user_name">Lea Bernard</span><br>
+                        <span class="user_date">16/01/2017</span><br>
+                        <span class="user_diagnostic">Calcul biliaire</span>
+                    </div>
+                    <div class="user_indicators">
+                        <span class="score">4/10</span><br>
+                        <span class="last-update">15 days ago</span>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="user_good">
+                    <img class="user_avatar" src="Juan-Manuel-Ibanez-Sanchez.jpg"/>
+                    <div class="user_info">
+                        <span class="user_name">Juan Manuel Ibanez Sanchez</span><br>
+                        <span class="user_date">03/02/2017</span><br>
+                        <span class="user_diagnostic">Reflux gastro-œsophagien</span>
+                    </div>
+                    <div class="user_indicators">
+                        <span class="score">7/10</span><br>
+                        <span class="last-update">3 days ago</span>
+                    </div>
+                </div>
+            </li>
+        </ul>   
+    </div>
+
+
+    <div class="user_list right" id="ul-post">
+        <ul>
+            <li>
+                <div class="user_bad">
+                    <img class="user_avatar cpointer" src="Manaf-Hassan.jpg" />
+                    <div class="user_info">
+                        <span class="user_name">Manaf Hassan</span><br>
+                        <span class="user_date">13/01/2017</span><br>
+                        <span class="user_diagnostic">Appendicite</span>
+                    </div>
+                    <div class="user_indicators">
+                        <span class="score">9/10</span><br>
+                        <span class="last-update">28 days ago</span>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="user_good">
+                    <img class="user_avatar"  src="Zeng-Shiaoting.jpg"/>
+                    <div class="user_info">
+                        <span class="user_name">Zeng Shiaoting</span><br>
+                        <span class="user_date">29/01/2017</span><br>
+                        <span class="user_diagnostic">Gallbladder</span>
+                    </div>
+                    <div class="user_indicators">
+                        <span class="score">6/10</span><br>
+                        <span class="last-update">12 days ago</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./jquery-3.2.0.min.js"></script>
+    <script src="./dashboard.js"></script>
+</body>
+
+</html>

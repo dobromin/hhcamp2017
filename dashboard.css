@@ -1,0 +1,76 @@
+body {
+    background: #ddd;
+}
+
+.cpointer {
+  cursor: pointer;
+}
+
+ul {
+    padding: 0;
+}
+
+.user_list {
+    left:0; 
+    position: absolute;
+    width: 100%;
+}
+
+.user_list.right{
+    left: 100%;
+}
+
+.user_list ul li {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+}
+
+.user_bad {
+    /*background-color: #ff4545;*/
+    background-color: rgba(255,0,0,0.6)
+}
+
+.user_good {
+    background-color: rgba(0,255,0,0.6);
+}
+
+.user_avatar {
+    position:relative;
+    top: 3.6rem;
+    left: 3.9rem;   
+    width: 9.5rem;
+    height: 9.5rem;
+    border: 1rem #ddd;
+    border-radius: 50%;
+}
+
+
+.user_avatar:hover {
+    transform: scale(1.2);
+}
+
+.user_info {
+    position:relative;
+    top: -3rem;
+    left: 15rem;  
+}
+
+.user_name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.user_date {
+    font-style: italic;
+}
+
+.user_diagnostic {
+
+}
+
+.user_indicators {
+    position:relative;
+    top: -10rem;
+    left: 60rem;  
+}

@@ -20,6 +20,19 @@ var map = {
     11 : "Dec"
 };
 
+var meters = {
+    1 : "70",
+    2 : "180",
+    3 : "290",
+    4 : "400",
+    5 : "420",
+    6 : "440",
+    7 : "460",
+    8 : "480",
+    9 : "500",
+    10 : "520"
+}
+
 xhr.onreadystatechange = function() {
     if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
         
@@ -69,7 +82,7 @@ function createGraph() {
     canvas.id = "myChart";
     canvas.width = 400;
     canvas.height = 400;
-    
+
     $(".user-infrmations").append(canvas);
 
     var ctx = document.getElementById("myChart");
@@ -109,6 +122,7 @@ function createGraph() {
                     pointHitRadius: 10,
                     data: data,
                     spanGaps: false,
+                    //multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
                 }
             ]
         },

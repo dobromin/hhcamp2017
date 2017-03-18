@@ -126,4 +126,8 @@ h1.question {
       margin-left: 0;
       margin-bottom: 15px;
     }
+
+    .mytable td:first-of-type {
+      display: none;
+    }
 }

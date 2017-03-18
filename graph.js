@@ -39,6 +39,18 @@ xhr.onreadystatechange = function() {
 
         console.log("parsed data :");
         console.log(resultat);
+
+        createGraph();
+
+        window.setTimeout(function() {
+            var temp = {
+                date : "16 Jun",
+                score: 4
+            };
+
+            resultat.push(temp);
+            createGraph();
+        }, 2000);
     }
 }
 
@@ -48,4 +60,56 @@ xhr.setRequestHeader('Accept', 'application/json');
 
 xhr.send();
 
+var ctx = document.getElementById("myChart");
 
+function createGraph() {
+    var lab = [];
+    var data = [];
+    for (var i = 0; i < resultat.length; i++) {
+        lab.push(resultat[i].date);
+        data.push(resultat[i].score);
+    }
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: lab,
+            datasets: [
+                {
+                    label: "Functional Capacity",
+                    fill: false,
+                    lineTension: 0.2,
+                    borderWidth: 6,
+                    backgroundColor: "rgba(75,192,192,0.4)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgba(75,192,192,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 4,
+                    pointHoverRadius: 14,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 8,
+                    pointStyle: 'radius',
+                    pointHitRadius: 10,
+                    data: data,
+                    spanGaps: false,
+                }
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        max: 10,
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+}

@@ -26,52 +26,6 @@
         <canvas id="myChart" width="400" height="400"></canvas>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
-    <script>
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["Day 1", "Day 4", "Day 7", "Day 10", "Day 13", "Day 16"],
-            datasets: [
-                {
-                    label: "Functional Capacity",
-                    fill: false,
-                    lineTension: 0.2,
-                    borderWidth: 6,
-                    backgroundColor: "rgba(75,192,192,0.4)",
-                    borderColor: "rgba(75,192,192,1)",
-                    borderCapStyle: 'butt',
-                    borderDash: [],
-                    borderDashOffset: 0.0,
-                    borderJoinStyle: 'miter',
-                    pointBorderColor: "rgba(75,192,192,1)",
-                    pointBackgroundColor: "#fff",
-                    pointBorderWidth: 4,
-                    pointHoverRadius: 14,
-                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                    pointHoverBorderColor: "rgba(220,220,220,1)",
-                    pointHoverBorderWidth: 2,
-                    pointRadius: 8,
-                    pointStyle: 'radius',
-                    pointHitRadius: 10,
-                    data: [4, 4, 1, 2, 3, 3],
-                    spanGaps: false,
-                }
-            ]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        max: 10,
-                        beginAtZero:true
-                    }
-                }]
-            }
-        }
-    });
-    </script>
-
     <script src="./jquery-3.2.0.min.js"></script>
     <script src="./graph.js"></script>
 </body>

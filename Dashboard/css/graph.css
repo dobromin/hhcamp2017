@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    font-family: lato, helvetica;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     margin: 0;
     padding: 0;
@@ -24,6 +24,10 @@ section {
 }
 
 /* GENERIC */
+
+.m10 {
+    margin: 10px;
+}
 
 .mb10 {
     margin-bottom: 10px;
@@ -55,6 +59,11 @@ section {
     flex: 0 0 auto;
 }
 
+.inbl {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .rounded {
     border-radius: 50%;
 }
@@ -69,15 +78,36 @@ section {
 
 /* FONT */
 
-.branding,
-.font-naming {
-    font-size: 34px;
-    font-weight: bold;
-    color: white;
+.font-thin {
+    font-weight: 100;
 }
 
-.font-naming {
+.font-light {
+    font-weight: 300; 
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-heavy {
+    font-weight: 900;
+}
+
+.font-size--heavy {
+    font-size: 34px;
+}
+
+.font-size--large {
     font-size: 22px;
+}
+
+.font-size--medium {
+    font-size: 18px;
 }
 
 /* COLOURS */
@@ -92,14 +122,16 @@ section {
     background-color: #40B3DF;
 }
 
-
-
-
+.branding {
+    color: white;
+}
 
 .user-resume  {
     color: white;
     background-color: #17649A;
 }
 
-.user-informations {
+.infos__li {
+    background-color: #40b3df;
+    border-radius: 2px;
 }

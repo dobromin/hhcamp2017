@@ -1,5 +1,10 @@
 var name = "test3@client.com";
 
+var scores = [];
+scores.push(6);
+scores.push(3);
+scores.push(7);
+
 for (var i = 0; i < 3; i++) {
     var method = 'POST';
  
@@ -9,7 +14,7 @@ for (var i = 0; i < 3; i++) {
 
     var date = new Date("2017-02-0" + (i + 1)).toISOString();
 
-    var user = {"xmppPatient": name, "xmppDoctor": "doc@client.com", "period": "before", "type": "question", "ts_utc": date};
+    var user = {"xmppPatient": name, "xmppDoctor": "doc@client.com", "period": "before", "type": "question", "ts_utc": date, "score": scores[i]};
 
     xhr.open(method, url, true);
 

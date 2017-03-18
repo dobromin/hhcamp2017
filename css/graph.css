@@ -1,3 +1,32 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
 section {
     max-width: 400px;
+}
+
+.heading {
+    background-color: #40B3DF;
+}
+
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.user-resume  {
+    flex: 0 0 200px;
+    padding: 25px;
+    color: white;
+    background-color: #17649A;
+}
+
+.user-informations {
+    flex: 1;
+    padding: 25px;
 }

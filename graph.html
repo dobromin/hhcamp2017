@@ -6,25 +6,52 @@
     <link rel="stylesheet" href="css/graph.css">
 </head>
 <body>
-    <header>
+    <header class="heading">
         <img src="logo.jpg">
         <nav>
             <ul>
-                <li>menu</li>
-                <li>menu</li>
+                <li>menu 1</li>
+                <li>menu 2</li>
             </ul>
         </nav>
     </header>
-    <aside>
-        <header>
-            <img src="LeaBernard.jpg" width="150" />
-            <p>You're in a good shape</p> 
-        </header>
+    <div class="main">
+        <aside class="user-resume">
+            <header>
+                <img src="LeaBernard.jpg" width="150" />
+                <p>Bernard Lea</p> 
+            </header>
+            <div class="summary">
+                <p>Age : 55</p>
+                <p>Weight : 55kg</p>
+                <p>Height : 155cm</p>
+            </div>
+            <div class="infos">
+                <p>last update</p>
+                <p>operation date</p>
+                <p>type of intervention</p>
+            </div>
+        </aside>
+        <section class="user-infrmations">
+            <header class="contact">
+                <ul>
+                    <li>
+                        <p>Family contact information</p>
+                    </li>
+                    <li>
+                        <p>Medication</p>
+                    </li>
+                    <li>
+                        <p>Appointment</p>
+                    </li>
+                </ul>
+            </header>
+            <div class="data">
 
-    </aside>
-    <section>
-        <canvas id="myChart" width="400" height="400"></canvas>
-    </section>
+            </div>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </section>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
     <script src="./jquery-3.2.0.min.js"></script>
     <script src="./graph.js"></script>

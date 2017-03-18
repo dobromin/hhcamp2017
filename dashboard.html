@@ -1,7 +1,8 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
 </head>
 <body style="overflow-x:hidden">
 
@@ -10,9 +11,9 @@
         <li id="post" role="presentation" onclick="onPostActive();"><a href="#">Postoperation</a></li>
     </ul>
 
-    <div class="user_list" id="ul-pre">
+    <div class="user_list" id="ul-pre" >
         <ul>
-            <li>
+            <li onclick="onPatient();">
                 <div class="user_bad">
                     <img class="user_avatar cpointer" src="LeaBernard.jpg"/>
                     <div class="user_info">
@@ -27,7 +28,7 @@
                 </div>
             </li>
 
-            <li>
+            <li onclick="onPatient();">
                 <div class="user_good">
                     <img class="user_avatar" src="Juan-Manuel-Ibanez-Sanchez.jpg"/>
                     <div class="user_info">
@@ -45,7 +46,7 @@
     </div>
 
 
-    <div class="user_list right" id="ul-post">
+    <div class="user_list right" id="ul-post" >
         <ul>
             <li>
                 <div class="user_bad">

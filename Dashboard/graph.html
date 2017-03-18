@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>Graph - Patient 1</title>
     <link rel="stylesheet" href="css/graph.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 </head>
-<body>
-    <header class="heading">
-        <img src="img/logo.jpg">
+<body class="flex-container-v">
+    <header class="heading flex-auto flex-container p10">
+        <h1 class="branding font-size--heavy font-bold">_____precovery*</h1>
         <nav>
             <ul>
                 <li>menu 1</li>
@@ -15,24 +16,27 @@
             </ul>
         </nav>
     </header>
-    <div class="main">
-        <aside class="user-resume">
-            <header>
-                <img src="img/LeaBernard.jpg" width="150" />
-                <p>Bernard Lea</p> 
+    <div class="main flex-fluid flex-container">
+        <aside class="user-resume flex-auto txtcenter">
+            <header class="p20 contrasted-bg">
+                <img src="img/LeaBernard.jpg" class="heavy-border rounded mb10" width="150" />
+                <p class="font-naming font-size--large font-bold">Bernard Lea</p> 
             </header>
-            <div class="summary">
-                <p>Age : 55</p>
-                <p>Weight : 55kg</p>
-                <p>Height : 155cm</p>
-            </div>
-            <div class="infos">
-                <p>last update</p>
-                <p>operation date</p>
-                <p>type of intervention</p>
-            </div>
+            <ul class="summary font-thin">
+                <li class="inbl font-size--medium m10"><span class="font-size--large">55</span><br />Age</li>
+                <li class="inbl font-size--medium m10"><span class="font-size--large">55kg</span><br />Weight</li>
+                <li class="m10">
+                    <img class="inbl" src="img/svg/body.svg" width="30">
+                    <span class="inbl font-size--medium"><span class="font-size--large">155cm</span><br />Height</span>
+                </li>
+            </ul>
+            <ul class="infos m10">
+                <li class="infos__li m10 p10">last update</li>
+                <li class="infos__li m10 p10">operation date</li>
+                <li class="infos__li m10 p10">type of intervention</li>
+            </ul>
         </aside>
-        <section class="user-infrmations">
+        <section class="user-informations flex-fluid">
             <header class="contact">
                 <ul>
                     <li>

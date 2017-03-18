@@ -14,53 +14,56 @@
     <script src="https://api.openrainbow.com/sdk/web/libs/rainbow-sdk.min.js"></script>
 </head>
 <body class="flex-container-v">
-    <header class="heading flex-auto flex-container p10">
-        <h1 class="branding font-size--heavy font-bold">_____precovery*</h1>
-        <nav>
+    <header class="heading flex-justify flex-container">
+        <h1 class="branding font-size--heavy font-bold p10">_____precovery*</h1>
+        <nav class="h100 heavy-blue">
             <ul>
-                <li>menu 1</li>
-                <li>menu 2</li>
+                <li class="inbl font-size--medium mr20"><img src="img/svg/icon_hearth.svg" height="40"></li>
+<!--                 <li class="inbl font-size--medium">Schedules</li>
+                <li class="inbl font-size--medium">Alert</li> -->
             </ul>
         </nav>
     </header>
     <div class="main flex-fluid flex-container">
-        <aside class="user-resume flex-auto txtcenter">
-            <header class="p20 contrasted-bg">
-                <img src="img/LeaBernard.jpg" class="heavy-border rounded mb10" width="150" />
+        <aside class="user-resume txtcenter">
+            <header class="p30">
+                <img src="img/LeaBernard.jpg" class="heavy-border rounded mb10" width="130" />
                 <p class="font-naming font-size--large font-bold">Bernard Lea</p> 
             </header>
             <ul class="summary font-thin">
-                <li class="inbl font-size--medium m10"><span class="font-size--large">55</span><br />Age</li>
-                <li class="inbl font-size--medium m10"><span class="font-size--large">55kg</span><br />Weight</li>
-                <li class="m10">
-                    <img class="inbl" src="img/svg/body.svg" width="30">
+                <li class="inbl font-size--medium mr10"><span class="font-size--large">55</span><br />Age</li>
+                <li class="inbl font-size--medium"><span class="font-size--large">55kg</span><br />Weight</li>
+                <li class="mt10">
+                    <img class="inbl" src="img/svg/body.svg" width="25">
                     <span class="inbl font-size--medium"><span class="font-size--large">155cm</span><br />Height</span>
                 </li>
             </ul>
             <ul class="infos m10">
-                <li class="infos__li m10 p10">last update</li>
-                <li class="infos__li m10 p10">operation date</li>
-                <li class="infos__li m10 p10">type of intervention</li>
+                <li class="infos__li m10 p10">Last update : 15/03/17</li>
+                <li class="infos__li m10 p10">Operation date: 14/02/17</li>
+                <li class="infos__li m10 p10">Type of intervention:<br /> Calcul biliaire</li>
             </ul>
         </aside>
-        <section class="user-informations flex-fluid">
-            <header class="contact">
-                <ul>
-                    <li>
-                        <p>Family contact information</p>
+        <section class="user-informations flex-fluid modx p20">
+            <div class="alert font-size--medium font-bold p10 mb20"><img src="img/svg/alert.svg" width="40" class="mr10">Dear M. Gonzalez, Mrs Bernard is feeling bad ! Could you check this please.
+            <button class="alert__button font-size--medium font-bold mr10">Call Mrs Bernard</button><button class="alert__button font-size--medium font-bold">Remind me</button></div>
+            <header class="contact mb20">
+                <ul class="flex-container">
+                    <li class="flex-fluid card mr20 p20">
+                        <h3>Family contact information :</h3>
+                        <p>Marco Bertrand</p>
+                        <img src="img/Pierre-Morvan.jpg" width="50" class="rounded">
                     </li>
-                    <li>
-                        <p>Medication</p>
-                    </li>
-                    <li>
-                        <p>Appointment</p>
+                    <li class="flex-fluid card p20">
+                        <h3>Medication</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a arcu a purus pellentesque pharetra et a ante. Nulla cursus sit amet ipsum vel dapibus. Nulla non tellus eu nunc tincidunt consequat. </p>
                     </li>
                 </ul>
             </header>
             <div class="data">
 
             </div>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <canvas id="myChart"></canvas>
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>

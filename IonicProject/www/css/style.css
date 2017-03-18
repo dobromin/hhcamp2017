@@ -102,3 +102,32 @@ h1.question {
   font-size: 25px;
   font-weight: bold;
 }
+
+@media (max-width: 500px) {
+   .title {
+      text-align: center;
+      padding: 10px 0 10px 0;
+      line-height: 35px;
+      font-size: 35px;
+      color: cornflowerblue;
+    }
+
+    h1.question {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .question {
+        padding: 0 10px;
+        font-size: 35px;
+    }
+
+    .answer-buttons > .button-balanced {
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+
+    .mytable td:first-of-type {
+      display: none;
+    }
+}

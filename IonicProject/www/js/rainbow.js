@@ -124,18 +124,24 @@ function sendAnswer(event) {
 };
 
 function createQuestion(msg) {
-    $("#question" + currentQuestion).animate({"left":"-110%"}, "slow"); 
+    
+    $("#question" + currentQuestion).animate({"left":"-200%"}, "slow"); 
     currentQuestion++;
     $("#question" + currentQuestion).animate({"left":"0"}, "slow");
 
-    var data = JSON.parse(msg.data);
-    console.log(data);
+    if (currentQuestion >=3) {
+        var data = JSON.parse(msg.data);
+        $("#question" + currentQuestion).children()[0].innerHTML = data.question;
+    } else {
+        var data = JSON.parse(msg.data);
+        console.log(data);
 
-    $("#question" + currentQuestion).children()[0].innerHTML = data.question;
+        $("#question" + currentQuestion).children()[0].innerHTML = data.question;
 
-    var rep = data.responses;
-    console.log(rep);
+        var rep = data.responses;
+        console.log(rep);
 
-    $("#question" + currentQuestion).children()[1].children[0].innerHTML = rep[0].response1;
-    $("#question" + currentQuestion).children()[1].children[1].innerHTML = rep[1].response2;
+        $("#question" + currentQuestion).children()[1].children[0].innerHTML = rep[0].response1;
+        $("#question" + currentQuestion).children()[1].children[1].innerHTML = rep[1].response2;
+    }
 };

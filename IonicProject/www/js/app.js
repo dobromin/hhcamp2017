@@ -43,4 +43,14 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
         });
     };
 
+    $scope.onButtonClick = function() {
+        $("#right").animate({"left":"-110%"}, "slow"); 
+        $("#right2").animate({"left":"0"}, "slow");
+    };
+
+    $scope.onButtonClick2 = function() {
+        $("#right2").animate({"left":"-110%"}, "slow"); 
+        $("#right3").animate({"left":"0"}, "slow");
+    };
+
 });

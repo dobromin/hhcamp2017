@@ -1,8 +1,21 @@
 html,
-body,
-ul {
+body {
+    height: 100%;
+    font-family: lato, helvetica;
+    font-size: 14px;
     margin: 0;
     padding: 0;
+}
+
+h1,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
 }
 
 
@@ -10,23 +23,83 @@ section {
     max-width: 400px;
 }
 
-.heading {
-    background-color: #40B3DF;
+/* GENERIC */
+
+.mb10 {
+    margin-bottom: 10px;
 }
 
-.main {
+.p10 {
+    padding: 10px;
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.flex-container,
+.flex-container-v {
     display: flex;
     flex-flow: row nowrap;
 }
 
+.flex-container-v {
+    flex-flow: column nowrap;
+}
+
+.flex-fluid {
+    flex: 1;
+}
+
+.flex-auto {
+    flex: 0 0 auto;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.heavy-border {
+    border: 4px solid white;
+}
+
+.txtcenter {
+    text-align: center;
+}
+
+/* FONT */
+
+.branding,
+.font-naming {
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+}
+
+.font-naming {
+    font-size: 22px;
+}
+
+/* COLOURS */
+
+.contrasted-bg {
+    background-color: #104971;
+}
+
+/* SPECIFIC */
+
+.heading {
+    background-color: #40B3DF;
+}
+
+
+
+
+
 .user-resume  {
-    flex: 0 0 200px;
-    padding: 25px;
     color: white;
     background-color: #17649A;
 }
 
 .user-informations {
-    flex: 1;
-    padding: 25px;
 }

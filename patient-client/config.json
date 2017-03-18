@@ -1,0 +1,49 @@
+{
+	"libraries": {
+		"prerequisites": [
+			"https://code.jquery.com/jquery-2.1.3.min.js",
+			"https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js",
+			"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js",
+			"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"
+		],
+		"sdk": {
+			"official": [
+				"https://api.openrainbow.com/sdk/web/libs/vendors-sdk.min.js",
+				"https://api.openrainbow.com/sdk/web/libs/rainbow-sdk.min.js"
+			],
+			"default": "official"
+		},
+		"after": [
+		]
+	},
+	"app": {
+		"bootstrap": "rainbowPortalClient",
+		"key": {
+			"appID": "1234",
+			"appSecret": ""
+		},
+		"js": [
+			"./src/js/rainbow-portal-client.js",
+			"./src/js/components/connection/connection.js",
+			"./src/js/components/conversation/conversation.js",
+			"./src/js/components/conversation/messageCmp.js",
+			"./src/js/components/filters/filters.js"
+		],
+		"css": [
+			"https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext,cyrillic",
+			"src/js/components/connection/connection.css",
+			"src/js/components/conversation/conversationCmp.css",
+			"src/js/components/conversation/messageCmp.css",
+			"src/styles/rainbow-portal-client.css",
+			"src/fonts/NimbusSanL-Regu.ttf",
+			"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		]
+	},
+	"settings": {
+		"verboseLog": true,
+		"disableCache": true,
+		"stopOnError": true,
+		"enableLoader": true,
+		"useAngularEvents":true
+	}
+}

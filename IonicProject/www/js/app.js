@@ -29,8 +29,9 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
       //confirm("pressed ");
         
         // $("#left").animate({"left":"-110%"}, "slow"); 
-        // $("#right").animate({"left":"0"}, "slow");
-
+        // $("#question1").animate({"left":"0"}, "slow");
+        rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+        
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             // alert(imageData.text);
             console.log("Barcode Format -> " + imageData.format);
@@ -43,15 +44,15 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
         });
     };
 
-    $scope.onButtonClick = function() {
-        $("#right").animate({"left":"-110%"}, "slow"); 
-        $("#right2").animate({"left":"0"}, "slow");
-    };
+    // $scope.onButtonClick = function() {
+    //     $("#question1").animate({"left":"-110%"}, "slow"); 
+    //     $("#question2").animate({"left":"0"}, "slow");
+    // };
 
-    $scope.onButtonClick2 = function() {
-        $("#right2").animate({"left":"-110%"}, "slow"); 
-        $("#right3").animate({"left":"0"}, "slow");
-    };
+    // $scope.onButtonClick2 = function() {
+    //     $("#question2").animate({"left":"-110%"}, "slow"); 
+    //     $("#question3").animate({"left":"0"}, "slow");
+    // };
 });
 
 angular.bootstrap(document.getElementById('test'), ['starter']);

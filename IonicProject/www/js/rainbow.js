@@ -71,7 +71,71 @@ function connectToRainbow() {
     $(document).on(rainbowSDK.connection.RAINBOW_ONCONNECTIONSTATECHANGED, onConnectionStateChangeEvent);
 };
 
-function onConnectionStateChangeEvent(event, status) {
+var conversation;
+var messages;
+var currentQuestion = 0;
+
+function onConnectionStateChangeEvent(event) {
     console.log("coucou !!!");
+    var status = rainbowSDK.connection.getState();
     console.log(rainbowSDK.connection.getState());
+
+    if(status == "connected") {
+        console.log("CONNECTED ----------------------------------");
+        var conversations = rainbowSDK.conversations.getAllConversations();
+        console.log("Conversation length----------------------------------" + conversations.length);
+
+        conversation = rainbowSDK.conversations.getConversationById("c265c07a3cfc484489d5716f1161bec9@sandbox-all-in-one-prod-1.opentouch.cloud");
+
+        console.log(conversation);
+
+        rainbowSDK.im.removeAllMessagesFromConversation(conversation)
+        .then(function() {
+
+            
+        });
+
+        var onConversationChangeEvent = function onConversationChangeEvent(event, conversationId) {
+            console.log("Conversation CHANGED------------", conversationId);
+            conversation = rainbowSDK.conversations.getConversationById("c265c07a3cfc484489d5716f1161bec9@sandbox-all-in-one-prod-1.opentouch.cloud");
+            messages = conversation.messages;
+
+            console.log(messages);
+
+            var last = messages.pop();
+            if (last.side === "R") {
+                last = messages.pop();
+            }
+
+            if (last) {
+                console.log(last);
+
+                createQuestion(last);
+            }
+        };
+
+        //$rootScope.$on(rainbowSDK.connection.RAINBOW_ONREADY, onConnectionStateChangeEvent);
+        $(document).on(rainbowSDK.conversations.RAINBOW_ONCONVERSATIONCHANGED, onConversationChangeEvent);
+    }
+};
+
+function sendAnswer(event) {
+    rainbowSDK.im.sendMessageToConversation(conversation, event.innerHTML);
+};
+
+function createQuestion(msg) {
+    $("#question" + currentQuestion).animate({"left":"-110%"}, "slow"); 
+    currentQuestion++;
+    $("#question" + currentQuestion).animate({"left":"0"}, "slow");
+
+    var data = JSON.parse(msg.data);
+    console.log(data);
+
+    $("#question" + currentQuestion).children()[0].innerHTML = data.question;
+
+    var rep = data.responses;
+    console.log(rep);
+
+    $("#question" + currentQuestion).children()[1].children[0].innerHTML = rep[0].response1;
+    $("#question" + currentQuestion).children()[1].children[1].innerHTML = rep[1].response2;
 };

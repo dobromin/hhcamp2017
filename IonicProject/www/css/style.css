@@ -68,25 +68,13 @@ body {
   background-size: cover;
 }*/
 
-#left {
+.left {
   left:0;
   position: absolute;
   width: 100%;
 }
 
-#right {
-  left:110%;
-  position: absolute;
-  width: 100%;
-}
-
-#right2 {
-  left:110%;
-  position: absolute;
-  width: 100%;
-}
-
-#right3 {
+.right {
   left:110%;
   position: absolute;
   width: 100%;

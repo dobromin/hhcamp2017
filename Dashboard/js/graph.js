@@ -84,7 +84,7 @@ function createGraph() {
     canvas.width = 400;
     canvas.height = 400;
 
-    $(".user-infrmations").append(canvas);
+    $(".user-informations").append(canvas);
 
     var ctx = document.getElementById("myChart");
 

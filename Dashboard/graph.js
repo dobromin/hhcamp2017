@@ -60,9 +60,20 @@ xhr.setRequestHeader('Accept', 'application/json');
 
 xhr.send();
 
-var ctx = document.getElementById("myChart");
+
 
 function createGraph() {
+    $('#myChart').remove(); // this is my <canvas> element
+
+    var canvas = document.createElement("canvas");
+    canvas.id = "myChart";
+    canvas.width = 400;
+    canvas.height = 400;
+    
+    $(".user-infrmations").append(canvas);
+
+    var ctx = document.getElementById("myChart");
+
     var lab = [];
     var data = [];
     for (var i = 0; i < resultat.length; i++) {

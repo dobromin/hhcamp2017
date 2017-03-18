@@ -1,0 +1,52 @@
+.title {
+  text-align: center;
+  padding: 20px 0 25PX 0;
+  line-height: 60px;
+  font-size: 60px;
+  border-bottom: 1px solid #ccc;
+  }
+
+.container {
+  height: calc(100% - 100px);
+}
+
+.mytable {
+  width: 100%;
+  height: 100%;
+
+}
+
+.mytable td {
+  height: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.mytable td:first-of-type {
+  width: 50%;
+  border-right: 1px solid #ccc;
+  text-align: left;
+  padding: 25px;
+}
+
+.button-large {
+  width: 170px;
+    height: 75px;
+    font-size: 30px;
+}
+
+.mytable .left-td {
+  vertical-align: top;
+  padding-top: 25px;
+}
+
+.myimg {
+  display: block;
+  margin: auto;
+  padding-bottom: 20px;
+}
+/*
+.button.button-balanced {
+  background-image: url("../img/code.png");
+  background-size: cover;
+}*/

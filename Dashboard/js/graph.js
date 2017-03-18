@@ -35,7 +35,6 @@ var meters = {
 
 xhr.onreadystatechange = function() {
     if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        Chart.defaults.global.legend.display = false;
         
         var data = JSON.parse(xhr.responseText).data;
         console.log("brut data :");
@@ -122,10 +121,10 @@ function createGraph() {
                     pointStyle: 'radius',
                     pointHitRadius: 10,
                     data: data,
-                    spanGaps: false,
-                    //multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
+                    spanGaps: false
                 },
                 {
+                    label: "Warning",
                     type: 'line',
                     data: [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
                     borderColor: "rgba(255,0,0,1)",

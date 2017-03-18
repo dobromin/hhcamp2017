@@ -14,3 +14,7 @@ function onPostActive() {
     $("#ul-pre").animate({"left":"-100%"}, "slow");
     
 };
+
+function onPatient() {
+    window.location = "graph.html";
+}

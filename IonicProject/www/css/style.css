@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .title {
   text-align: center;
   padding: 20px 0 25PX 0;
@@ -50,3 +54,30 @@
   background-image: url("../img/code.png");
   background-size: cover;
 }*/
+
+#left {
+  left:0; 
+  position: absolute;
+  width: 100%;
+}
+
+#right {
+  left:110%; 
+  position: absolute;
+  width: 100%;
+}
+
+.question {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.answer-buttons {
+  text-align: center;
+}
+
+.answer-buttons > .button-balanced {
+  min-width: 150px;
+  margin-left: 25px;
+}

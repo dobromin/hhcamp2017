@@ -8,6 +8,11 @@ body {
   cursor: pointer;
 }
 
+.tab_title {
+    font-size: large;
+}
+
+
 ul {
     padding: 0;
 }

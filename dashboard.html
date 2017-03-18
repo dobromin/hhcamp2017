@@ -6,9 +6,9 @@
 </head>
 <body style="overflow-x:hidden">
 
-    <ul class="nav nav-pills nav-justified">
-        <li id="pre" role="presentation" class="active" onclick="onPreActive();"><a href="#">Preoperation</a></li>
-        <li id="post" role="presentation" onclick="onPostActive();"><a href="#">Postoperation</a></li>
+    <ul class="nav nav-pills nav-justified tab_title">
+        <li id="pre" role="presentation" class="active" onclick="onPreActive();"><a href="#">PRE-OPERATION</a></li>
+        <li id="post" role="presentation" onclick="onPostActive();"><a href="#">POST-OPERATION</a></li>
     </ul>
 
     <div class="user_list" id="ul-pre" >
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li onclick="onPatient();">
                 <div class="user_bad">
                     <img class="user_avatar cpointer" src="Manaf-Hassan.jpg" />
                     <div class="user_info">
@@ -55,13 +55,13 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li onclick="onPatient();">
                 <div class="user_good">
                     <img class="user_avatar"  src="Zeng-Shiaoting.jpg"/>
                     <div class="user_info">
                         <span class="user_name">Zeng Shiaoting</span><br>
                         <span class="user_date">29/01/2017</span><br>
-                        <span class="user_diagnostic">Diagnostique: Diverticulose</span>
+                        <span class="user_diagnostic">Diagnostique: Diverticulite</span>
                     </div>
                     <div class="user_indicators">
                         <span class="score">6/10</span><br>
@@ -75,7 +75,7 @@
 
     <div class="user_list right" id="ul-post" >
         <ul>
-            <li>
+            <li onclick="onPatient();">
                 <div class="user_bad">
                     <img class="user_avatar cpointer" src="Manaf-Hassan.jpg" />
                     <div class="user_info">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li onclick="onPatient();">
                 <div class="user_bad">
                     <img class="user_avatar cpointer" src="LeaBernard.jpg"/>
                     <div class="user_info">
@@ -103,14 +103,13 @@
                     </div>
                 </div>
             </li>
-
-            <li>
+            <li onclick="onPatient();">
                 <div class="user_good">
                     <img class="user_avatar"  src="Zeng-Shiaoting.jpg"/>
                     <div class="user_info">
                         <span class="user_name">Zeng Shiaoting</span><br>
                         <span class="user_date">29/01/2017</span><br>
-                        <span class="user_operation_type">Gallbladder</span>
+                        <span class="user_operation_type">Type d'opération: laparotomie</span>
                     </div>
                     <div class="user_indicators">
                         <span class="score">14/22</span><br>

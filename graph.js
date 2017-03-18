@@ -35,22 +35,22 @@ xhr.onreadystatechange = function() {
             var month = map[date.getMonth()];
             temp.date = day + " " + month;
             resultat.push(temp);
-        }
+        };
 
         console.log("parsed data :");
         console.log(resultat);
 
         createGraph();
 
-        // window.setTimeout(function() {
-        //     var temp = {
-        //         date : "16 Jun",
-        //         score: 4
-        //     };
+        window.setTimeout(function() {
+            var temp = {
+                date : "4 Feb",
+                score: 4
+            };
 
-        //     resultat.push(temp);
-        //     createGraph();
-        // }, 2000);
+            resultat.push(temp);
+            createGraph();
+        }, 2000);
     }
 }
 

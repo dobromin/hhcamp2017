@@ -1,5 +1,5 @@
 var method = 'GET';
-var url = 'https://blueoceanlabs.win/hh/v1.0/data?xmpppatient=pat@client.com&xmppdoctor=doc@client.com';
+var url = 'https://blueoceanlabs.win/hh/v1.0/data?xmpppatient=test3@client.com&xmppdoctor=doc@client.com';
 
 var xhr = new XMLHttpRequest();
 
@@ -30,8 +30,8 @@ xhr.onreadystatechange = function() {
         for(var i = 0; i < data.length; i++) {
             var temp = {};
             temp.score = data[i].score;
-            var date = new Date(data[i].ts);
-            var day = date.getDate() + i;
+            var date = new Date(data[i].ts_utc);
+            var day = date.getDate();
             var month = map[date.getMonth()];
             temp.date = day + " " + month;
             resultat.push(temp);
@@ -42,15 +42,15 @@ xhr.onreadystatechange = function() {
 
         createGraph();
 
-        window.setTimeout(function() {
-            var temp = {
-                date : "16 Jun",
-                score: 4
-            };
+        // window.setTimeout(function() {
+        //     var temp = {
+        //         date : "16 Jun",
+        //         score: 4
+        //     };
 
-            resultat.push(temp);
-            createGraph();
-        }, 2000);
+        //     resultat.push(temp);
+        //     createGraph();
+        // }, 2000);
     }
 }
 

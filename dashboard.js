@@ -3,7 +3,7 @@ function onPreActive() {
     $("#post").toggleClass("active", false);
 
      $("#ul-pre").animate({"left":"0"}, "slow");
-     $("#ul-post").animate({"left":"100%"}, "slow"); 
+     $("#ul-post").animate({"left":"110%"}, "slow");
 };
 
 function onPostActive() {
@@ -11,7 +11,7 @@ function onPostActive() {
     $("#post").toggleClass("active", true);
 
     $("#ul-post").animate({"left":"0"}, "slow"); 
-    $("#ul-pre").animate({"left":"-100%"}, "slow");
+    $("#ul-pre").animate({"left":"-110%"}, "slow");
     
 };
 

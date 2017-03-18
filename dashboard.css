@@ -1,12 +1,26 @@
 body {
-    background: #eee;
+    background: #fdfdfd;
     width: 100%;
     height: 100%;
+}
+
+.mycontainer {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+    font-size: 15px;
 }
 
 .cpointer {
   cursor: pointer;
 }
+
+.tab_title {
+    font-size: large;
+}
+
 
 ul {
     padding: 0;
@@ -16,10 +30,11 @@ ul {
     left:0; 
     position: absolute;
     width: 100%;
+    margin-top: 25px;
 }
 
 .user_list.right{
-    left: 100%;
+    left: 110%;
 }
 
 .user_list ul li {
@@ -37,8 +52,17 @@ li > div {
 
 .user_bad {
     /*background-color: #ff4545;*/
-    background-color: rgba(255,0,0,0.6)
+    background-color: rgba(255, 56, 56, 0.6);
 }
+
+.separator {
+    padding: 25px 0 5px 0;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+}
+
+
 
 .user_good {
     background-color: rgba(0,255,0,0.6);
@@ -47,7 +71,7 @@ li > div {
 .user_avatar {
     position:absolute;
     top: 20px;
-    left: 3.9rem;   
+    left: 25px;   
     width: 50px;
     height: 50px;
     border: 1rem #ddd;
@@ -62,7 +86,7 @@ li > div {
 
 .user_info {
     position:relative;
-    padding-left: 100px;
+    padding-left: 90px;
     padding-top: 15px;
 }
 

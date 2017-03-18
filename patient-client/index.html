@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-controller="rainbowPortalClientController">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="./res/appLogo.png"/>
+		<title>Live chat</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"></script>
+	</head>
+
+	<body>
+		<div class="app-portal">
+			<connection-state name="connectionState"></connection-state>
+			<div class="app-conversation">
+				<conversation></conversation>
+			</div>
+		</div>
+		<!-- Load the FOSS, the SDK and the application files -->
+		<script src="https://api.openrainbow.com/sdk/web/libs/loader-sdk.min.js" data-main="./config.json"></script>
+	 </body>
+</html>

@@ -25,9 +25,10 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-	<script src="js/angular.min.js"></script>
+	  <script src="js/angular.min.js"></script>
     <script src="js/ng-cordova.min.js"></script>
     <script src="js/cordova_plugins.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -38,8 +39,9 @@
   <body ng-app="starter">
     <ion-pane>
         <div class="title">Precovery</div>
-      <div ng-controller="ExampleController" class="container">
-        <table class="mytable">
+
+        <div ng-controller="ExampleController" class="container">
+        <table id="left" class="mytable">
           <td class="left-td">
 
             <div class="list">
@@ -64,6 +66,36 @@
           </td>
 
         </table>
+
+        <div id="right" class="mytable">
+          <h1 class="question">Question 1 : Are you feeling OK ?</h1>
+          <div class="answer-buttons">
+            <button class="button button-balanced" ng-click="onButtonClick()">
+              YES
+            </button>
+
+            <button class="button button-balanced" ng-click="onButtonClick()">
+              NO
+            </button>
+          </div>
+        </div>
+
+        <div id="right2" class="mytable">
+          <h1 class="question">Question 2 : Do you want to take a walk with me ?</h1>
+          <div class="answer-buttons">
+            <button class="button button-balanced" ng-click="onButtonClick2()">
+              YES
+            </button>
+
+            <button class="button button-balanced" ng-click="onButtonClick2()">
+              NO
+            </button>
+          </div>
+        </div>
+
+        <div id="right3" class="mytable">
+          <h1 class="question">Thank you ! You did well today !!!!</h1>
+        </div>
 
       </div>
     </ion-pane>

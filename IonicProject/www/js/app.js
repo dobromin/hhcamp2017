@@ -27,14 +27,30 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
 
     $scope.scanBarcode = function() {
       //confirm("pressed ");
+        
+        // $("#left").animate({"left":"-110%"}, "slow"); 
+        // $("#right").animate({"left":"0"}, "slow");
 
         $cordovaBarcodeScanner.scan().then(function(imageData) {
-            alert(imageData.text);
+            // alert(imageData.text);
             console.log("Barcode Format -> " + imageData.format);
             console.log("Cancelled -> " + imageData.cancelled);
+
+            $("#left").animate({"left":"-110%"}, "slow"); 
+            $("#right").animate({"left":"0"}, "slow");
         }, function(error) {
             console.log("An error happened -> " + error);
         });
+    };
+
+    $scope.onButtonClick = function() {
+        $("#right").animate({"left":"-110%"}, "slow"); 
+        $("#right2").animate({"left":"0"}, "slow");
+    };
+
+    $scope.onButtonClick2 = function() {
+        $("#right2").animate({"left":"-110%"}, "slow"); 
+        $("#right3").animate({"left":"0"}, "slow");
     };
 
 });

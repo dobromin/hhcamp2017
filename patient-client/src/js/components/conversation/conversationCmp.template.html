@@ -1,0 +1,21 @@
+<div class="conversationCmp-area" ng-hide="!isReady">
+
+<!--
+<div class="conversationCmp-title">Conversation</div>
+-->
+
+<div id="conversationCmp-messages" class="conversationCmp-messages">
+	<rbx-message ng-repeat="item in conversation.messages | hitec" item="item"></rbx-message>
+</div>
+
+<form ng-submit="onSend()">
+	<input 	
+		class="conversationCmp-editor"
+		name="message"
+		type="text" 
+		id="messageField"
+		placeholder="Your message..." 
+		ng-model="message"
+		autofocus
+		autocomplete="off"/>
+</form>

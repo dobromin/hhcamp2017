@@ -1,17 +1,21 @@
+body {
+  overflow-x: hidden;
+}
+
 .title {
   text-align: center;
-  padding: 20px 0 25PX 0;
+  padding: 20px 0 25px 0;
   line-height: 60px;
-  font-size: 60px;
+  font-size: 70px;
   border-bottom: 1px solid #ccc;
-  }
+}
 
 .container {
   height: calc(100% - 100px);
 }
 
 .mytable {
-  width: 100%;
+  width: 100%;  
   height: 100%;
 
 }
@@ -50,3 +54,50 @@
   background-image: url("../img/code.png");
   background-size: cover;
 }*/
+
+#left {
+  left:0; 
+  position: absolute;
+  width: 100%;
+}
+
+#right {
+  left:110%; 
+  position: absolute;
+  width: 100%;
+}
+
+#right2 {
+  left:110%; 
+  position: absolute;
+  width: 100%;
+}
+
+#right3 {
+  left:110%; 
+  position: absolute;
+  width: 100%;
+}
+
+.question {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 55px;
+}
+
+h1.question {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.answer-buttons {
+  text-align: center;
+  font-size: 55px;
+}
+
+.answer-buttons > .button-balanced {
+  min-width: 180px;
+  margin-left: 35px;
+  font-size: 25px;
+  font-weight: bold;
+}

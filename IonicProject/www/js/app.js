@@ -33,7 +33,9 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
         // rainbowSDK.im.sendMessageToConversation(conversation, "GO");
 
         $scope.test = window.setTimeout(function() {
+            console.log("setTimeout");
             if ($scope.scanning) {
+                console.log("should change");
                 $scope.$apply(function() {
                     $scope.scanning = false;
                 });

@@ -128,7 +128,7 @@ canvas {
 .alert {
     overflow: hidden;
     color: white;
-    background-color: #d52222;
+    background-color: #FE4365;
     border-radius: 2px;
     box-shadow: 0px 2px 1px 0px #fdcfcf;
 }
@@ -203,6 +203,7 @@ button {
 }
 
 .infos__li {
-    background-color: #5CE22B;
+    color: black;
+    background-color: #C7F464;
     border-radius: 2px;
 }

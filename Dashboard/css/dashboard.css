@@ -4,6 +4,10 @@ body {
     height: 100%;
 }
 
+header {
+    background-color: #00b9ff;
+}
+
 .mycontainer {
     max-width: 800px;
     margin: auto;
@@ -52,7 +56,7 @@ li > div {
 
 .user_bad {
     /*background-color: #ff4545;*/
-    background-color: rgba(255, 56, 56, 0.6);
+    background-color: #FE4365;
 }
 
 .separator {
@@ -65,7 +69,7 @@ li > div {
 
 
 .user_good {
-    background-color: rgba(0,255,0,0.6);
+    background-color: #C7F464;
 }
 
 .user_avatar {

@@ -1,5 +1,5 @@
 var method = 'GET';
-var url = 'https://blueoceanlabs.win/hh/v1.0/data?xmpppatient=test3@client.com&xmppdoctor=doc@client.com';
+var url = 'https://blueoceanlabs.win/hh/v1.0/data?xmpppatient=19679302d537427395ed6b5c52e32e36@sandbox-all-in-one-prod-1.opentouch.cloud&xmppdoctor=DoctorJid';
 
 var xhr = new XMLHttpRequest();
 
@@ -37,8 +37,6 @@ xhr.onreadystatechange = function() {
     if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
         
         var data = JSON.parse(xhr.responseText).data;
-        console.log("brut data :");
-        console.log(data);
 
         for(var i = 0; i < data.length; i++) {
             var temp = {};
@@ -50,20 +48,17 @@ xhr.onreadystatechange = function() {
             resultat.push(temp);
         };
 
-        console.log("parsed data :");
-        console.log(resultat);
-
         createGraph();
 
-        window.setTimeout(function() {
-            var temp = {
-                date : "4 Feb",
-                score: 4
-            };
+        // window.setTimeout(function() {
+        //     var temp = {
+        //         date : "4 Feb",
+        //         score: 4
+        //     };
 
-            resultat.push(temp);
-            createGraph();
-        }, 2000);
+        //     resultat.push(temp);
+        //     createGraph();
+        // }, 2000);
     }
 }
 
@@ -75,7 +70,9 @@ xhr.send();
 
 
 function createGraph() {
-    console.log("CreateGraph");
+    console.log("CreateGraph with data:");
+    console.log(resultat);
+
     $('#myChart').remove(); // this is my <canvas> element
 
     var canvas = document.createElement("canvas");
@@ -126,7 +123,7 @@ function createGraph() {
                 {
                     label: "Warning",
                     type: 'line',
-                    data: [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                    data: [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
                     borderColor: "rgba(255,0,0,1)",
                     pointRadius: 0,
                     fill: false

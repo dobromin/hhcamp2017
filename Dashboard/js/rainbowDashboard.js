@@ -2,6 +2,7 @@
 var login = "surgeon.hackathon@al-enterprise.com";
 var password = "Hackathon@16";
 
+
 /* Bootstrap the SDK */
 angular.bootstrap(document.getElementById("test"), ["sdk"]).get("rainbowSDK");
 
@@ -54,8 +55,11 @@ var waitForMessage = function waitForMessage() {
             conversation = rainbowSDK.conversations.getConversationById("19679302d537427395ed6b5c52e32e36@sandbox-all-in-one-prod-1.opentouch.cloud");
             messages = conversation.messages;
             console.log(messages);
-            // redraw the graph
-            createGraph();
+            resultat = [];
+            xhr.open(method, url, true);
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.send();
+            createGraph(); // redraw the graph
         };
 
 

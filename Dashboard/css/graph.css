@@ -20,6 +20,11 @@ ul {
     list-style-type: none;
 }
 
+canvas {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 /* GENERIC */
 
 .modx {

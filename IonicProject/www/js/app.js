@@ -23,24 +23,41 @@ var exampleApp = angular.module('starter', ['ionic', 'ngCordova'])
   });
 });
 
-exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScanner) {
+exampleApp.controller("ExampleController", function($scope, $timeout, $cordovaBarcodeScanner) {
 
     $scope.scanBarcode = function() {
       //confirm("pressed ");
-        
+        $scope.scanning = true;
         // $("#left").animate({"left":"-110%"}, "slow"); 
         // $("#question1").animate({"left":"0"}, "slow");
         // rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+        $scope.test = $timeout(function() {
+            console.log("setTimeout");
+            if ($scope.scanning) {
+                console.log("should change");
+                $scope.scanning = false;
+                rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+            }
+        }, 5000);
+        // $scope.test = window.setTimeout(function() {
+            
+        // }, 5000);
 
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             // alert(imageData.text);
             console.log("Barcode Format -> " + imageData.format);
             console.log("Cancelled -> " + imageData.cancelled);
 
+            if ($scope.scanning) {
+                $scope.scanning = false;
+                rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+
+                //window.clearTimeout($scope.test);
+            }
             // $("#left").animate({"left":"-110%"}, "slow"); 
             // $("#right").animate({"left":"0"}, "slow");
 
-            rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+            // rainbowSDK.im.sendMessageToConversation(conversation, "GO");
         }, function(error) {
             console.log("An error happened -> " + error);
         });

@@ -123,6 +123,11 @@ function sendAnswer(event) {
     rainbowSDK.im.sendMessageToConversation(conversation, event.innerHTML);
 };
 
+function sendAnswer2(event) {
+    $(".walking").toggleClass("show", true);
+    rainbowSDK.im.sendMessageToConversation(conversation, event.innerHTML);
+};
+
 function createQuestion(msg) {
     
     $("#question" + currentQuestion).animate({"left":"-200%"}, "slow"); 
@@ -132,6 +137,7 @@ function createQuestion(msg) {
     if (currentQuestion >=3) {
         var data = JSON.parse(msg.data);
         $("#question" + currentQuestion).children()[0].innerHTML = data.question;
+        rainbowSDK.im.sendMessageToConversation(conversation, "OK");
     } else {
         var data = JSON.parse(msg.data);
         console.log(data);

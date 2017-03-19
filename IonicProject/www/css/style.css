@@ -103,6 +103,18 @@ h1.question {
   font-weight: bold;
 }
 
+.walking {
+  height: 207px;
+  width: 250px;
+  display: block;
+  margin: auto;
+  visibility: hidden;
+}
+
+.walking.show {
+  visibility: visible;
+}
+
 @media (max-width: 500px) {
    .title {
       text-align: center;

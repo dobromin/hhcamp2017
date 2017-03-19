@@ -34,11 +34,13 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
 
         $scope.test = window.setTimeout(function() {
             if ($scope.scanning) {
-                $scope.scanning = false;
+                $scope.$apply(function() {
+                    $scope.scanning = false;
+                });
                 rainbowSDK.im.sendMessageToConversation(conversation, "GO");
             }
         }, 5000);
-        
+
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             // alert(imageData.text);
             console.log("Barcode Format -> " + imageData.format);

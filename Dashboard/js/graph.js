@@ -74,8 +74,8 @@ xhr.setRequestHeader('Accept', 'application/json');
 xhr.send();
 
 
-
 function createGraph() {
+    console.log("CreateGraph");
     $('#myChart').remove(); // this is my <canvas> element
 
     var canvas = document.createElement("canvas");

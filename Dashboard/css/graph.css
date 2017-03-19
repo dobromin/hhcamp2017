@@ -97,6 +97,10 @@ canvas {
     justify-content: space-between;
 }
 
+.flex-center {
+    align-items: center;
+}
+
 .inbl {
     display: inline-block;
     vertical-align: middle;

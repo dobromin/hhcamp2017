@@ -27,20 +27,33 @@ exampleApp.controller("ExampleController", function($scope, $cordovaBarcodeScann
 
     $scope.scanBarcode = function() {
       //confirm("pressed ");
-        
+        $scope.scanning = true;
         // $("#left").animate({"left":"-110%"}, "slow"); 
         // $("#question1").animate({"left":"0"}, "slow");
         // rainbowSDK.im.sendMessageToConversation(conversation, "GO");
 
+        $scope.test = window.setTimeout(function() {
+            if ($scope.scanning) {
+                $scope.scanning = false;
+                rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+            }
+        }, 5000);
+        
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             // alert(imageData.text);
             console.log("Barcode Format -> " + imageData.format);
             console.log("Cancelled -> " + imageData.cancelled);
 
+            if ($scope.scanning) {
+                $scope.scanning = false;
+                rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+
+                window.clearTimeout($scope.test);
+            }
             // $("#left").animate({"left":"-110%"}, "slow"); 
             // $("#right").animate({"left":"0"}, "slow");
 
-            rainbowSDK.im.sendMessageToConversation(conversation, "GO");
+            // rainbowSDK.im.sendMessageToConversation(conversation, "GO");
         }, function(error) {
             console.log("An error happened -> " + error);
         });

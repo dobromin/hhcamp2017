@@ -18,3 +18,7 @@ function onPostActive() {
 function onPatient() {
     window.location = "graph.html";
 }
+
+function onPatient_post() {
+    window.location = "graph_post.html";
+}

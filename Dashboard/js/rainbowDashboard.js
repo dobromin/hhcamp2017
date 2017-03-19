@@ -59,7 +59,7 @@ var waitForMessage = function waitForMessage() {
             xhr.open(method, url, true);
             xhr.setRequestHeader('Accept', 'application/json');
             xhr.send();
-            createGraph(); // redraw the graph
+            createGraph2();
         };
 
 
